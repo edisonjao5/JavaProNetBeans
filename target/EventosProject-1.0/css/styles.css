@@ -1,0 +1,247 @@
+/* 
+    Created on : 04-10-2021, 08:22:07
+    Author     : edisonjao
+*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, #FDFBF2, #FCE290,#FFBFAD);
+    font-family: 'Ropa Sans', sans-serif;
+    width: 100%;
+}
+
+header{
+    opacity: 0.9;
+}
+
+main{
+   max-width: 100%;
+} 
+
+.main1{
+    border: 5px ridge white;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 400px;
+    background-color: #d9d9d9;
+    opacity: 0.7;
+}
+
+#main2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ppalimg{
+    height: 390px;
+    position: relative;
+}
+
+.mainGrid{
+    width: 300px;
+    height: 400px;
+}
+
+.images{
+    max-width:  300px;
+    max-height: 400px;
+}
+
+.images2{
+    width: 100%;
+    height: auto;
+}
+
+.images3{
+width: 55%;
+height: 50%;
+}
+
+.images5{
+    --x:7px;
+    --y:15px;
+    clip-path:polygon(
+        var(--y)              var(--y),
+        calc(100% - var(--y)) var(--y),
+        calc(100% - var(--y)) calc(100% - var(--y)),
+        var(--y)              calc(100% - var(--y)),
+        0 calc(100% - var(--x) - var(--y)),
+        0 calc(var(--x) + var(--y)));
+    margin:30px;
+    transform:perspective(1000px) rotateY(37deg);
+    outline: var(--y) solid rgba(0,0,0,0.4);
+    outline-offset: calc(-1*var(--y));
+    padding:var(--y) var(--y) var(--y) 0;
+    transition:1s all;
+    max-width:100%;
+    display:block;
+    margin:auto;
+}
+
+.images5:hover{
+    transform:perspective(1000px) rotateY(0deg);
+    clip-path:polygon(
+        var(--y)              var(--y),
+        calc(100% - var(--y)) var(--y),
+        calc(100% - var(--y)) calc(100% - var(--y)),
+        var(--y)              calc(100% - var(--y)),
+        var(--y)  calc(100% - var(--x) - var(--y)),
+        var(--y)  calc(var(--x) + var(--y))
+        );
+}
+
+#primera{
+    position: absolute;
+    left: 200px;
+    top: 150px;
+}
+
+#segunda{
+    position: absolute;
+    left: 520px;
+    top: 220px;
+}
+
+#tercera{
+    position: absolute;
+    left: -10px;
+    z-index: -1;
+}
+
+#cuarta{
+    position: absolute;
+    left: 580px;
+    top: -20px;
+    z-index: 1;
+}
+
+#quinta{
+    position: absolute;
+    left: 320px;
+    z-index: -1;
+}
+
+#sexta{
+    position: absolute;
+    left: 810px;
+}
+
+#septima{
+    position: absolute;
+    left: 1080px;
+    top: 65px;
+    z-index: -1;
+}
+
+#titulo{
+    width: 700px;
+    position: absolute;
+    left: 550px;
+    top: 320px;
+    z-index: 1;
+    color: #d9d9d9;
+    opacity: 1;
+}
+
+#buttCotiz{
+    position: absolute;
+    left: 955px;
+    top: 375px;
+    z-index: 1;
+}
+
+#Cotiza:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.babys{
+    width: 100%;
+    max-height: 233px;
+}
+
+.slider {
+    width: 1000px;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 140px;
+}
+
+.slides {
+    display: flex;
+    overflow-x: auto;
+}
+
+.slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 20px;
+}
+
+.slides::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 1000px;
+    height: 500px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    border: 5px ridge #d9d9d9;
+}
+
+.slides > div:target {
+     transform: scale(1); 
+}
+
+.slider > a {
+    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: gray;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+}
+
+.slider > a:active {
+    top: 1px;
+}
+
+.slider > a:focus {
+    background: #000;
+}
+
+.carruPhoto{
+    max-height: 490px;
+    min-width: 400px;
+}
+
+.fondo{
+    background-image: url('../img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center center center;
+}
